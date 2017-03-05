@@ -52,3 +52,17 @@ addCommandAlias("dependency-graph_05_dependencyLicenseInfo", "dependency-graph/d
 addCommandAlias("dependency-graph_06_dependencyBrowseGraph", "dependency-graph/dependencyBrowseGraph")
 addCommandAlias("dependency-graph_06_dependencyBrowseGraph_open", "dependency-graph/openDepGraphHtml")
 // end plugin: sbt-dependency-graph
+
+// start plugin: sbt-coursier
+lazy val coursier = (project in file("coursier"))
+  .settings(commonSettings)
+  .settings(
+    name := "coursier",
+    description := "Fetch your dependencies faster...and more.",
+    libraryDependencies ++= Seq(
+      "com.typesafe.play" %% "play" % "2.6.0-M1"
+    )
+  )
+
+addCommandAlias("coursier_01_dependencyTree", "coursier/coursierDependencyTree")
+// end plugin: sbt-coursier
