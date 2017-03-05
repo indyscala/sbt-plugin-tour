@@ -66,3 +66,19 @@ lazy val coursier = (project in file("coursier"))
 
 addCommandAlias("coursier_01_dependencyTree", "coursier/coursierDependencyTree")
 // end plugin: sbt-coursier
+
+// start plugin: sbt-updates
+lazy val updates = (project in file("updates"))
+  .settings(commonSettings)
+  .settings(
+    name := "updates",
+    description := "How out-of-date are my dependencies?",
+    libraryDependencies ++= Seq(
+      "com.typesafe.slick" %% "slick" % "3.0.1",
+      "org.scalaz" %% "scalaz-core" % "7.2.7"
+    )
+  )
+
+addCommandAlias("updates_01_dependencyUpdates", "updates/dependencyUpdates")
+addCommandAlias("updates_02_dependencyUpdatesReport", "updates/dependencyUpdatesReport")
+// end plugin: sbt-updates
