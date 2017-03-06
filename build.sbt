@@ -89,7 +89,8 @@ lazy val site = (project in file("site"))
   .settings(commonSettings)
   .settings(
     name := "site",
-    description := "Assemble a snazzy website for your project."
+    description := "Assemble a snazzy website for your project.",
+    baseURL in Hugo := new URI("http://indyscala.org/sbt-plugin-tour")
   )
 
 addCommandAlias("site_01_makeSite", "site/makeSite")

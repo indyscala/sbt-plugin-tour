@@ -1,4 +1,3 @@
-baseurl = "http://localhost:4000/"
 languageCode = "en-us"
 title = "sbt-plugin-tour"
 theme = "purehugo"
