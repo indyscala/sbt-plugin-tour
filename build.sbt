@@ -138,7 +138,11 @@ lazy val mima = (project in file("mima"))
   .settings(commonSettings)
   .settings(
     name := "mima",
-    description := "Prevent unintended binary incompatibilities between releases."
+    description := "Prevent unintended binary incompatibilities between releases.",
+    libraryDependencies ++= Seq(
+      "org.slf4j" % "slf4j-api" % "1.7.21"
+    ),
+    mimaPreviousArtifacts := Set("org.log4s" %% "log4s" % "1.3.4")
   )
 
 addCommandAlias("mima_01_mimaReportBinaryIssues", "mima/mimaReportBinaryIssues")
