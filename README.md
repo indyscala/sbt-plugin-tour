@@ -17,3 +17,19 @@
  * [site](site/README.md) - Assemble a snazzy website for your project.
  * [ghpages](site/README.md#sbt-ghpages) - Publish that snazzy website on GitHub Pages.
  * [rig](rig/README.md) - Simplifies process of running CI on Travis and publishing releases to Sonatype.
+
+
+## TODO:
+
+ * mima
+ * unidoc
+ * release
+ * jmh
+ * sonatype
+ * travisci
+ * tut
+ * native-packager
+ * twirl
+ * gatling
+ * webpack
+ * maybe better demo of rig
