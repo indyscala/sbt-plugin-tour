@@ -82,3 +82,16 @@ lazy val updates = (project in file("updates"))
 addCommandAlias("updates_01_dependencyUpdates", "updates/dependencyUpdates")
 addCommandAlias("updates_02_dependencyUpdatesReport", "updates/dependencyUpdatesReport")
 // end plugin: sbt-updates
+
+// start plugin: sbt-site
+lazy val site = (project in file("site"))
+  .enablePlugins(HugoPlugin)
+  .settings(commonSettings)
+  .settings(
+    name := "site",
+    description := "Assemble a snazzy website for your project."
+  )
+
+addCommandAlias("site_01_makeSite", "site/makeSite")
+addCommandAlias("site_02_previewSite", "site/previewSite")
+// end plugin: sbt-site
