@@ -83,16 +83,22 @@ addCommandAlias("updates_01_dependencyUpdates", "updates/dependencyUpdates")
 addCommandAlias("updates_02_dependencyUpdatesReport", "updates/dependencyUpdatesReport")
 // end plugin: sbt-updates
 
-// start plugin: sbt-site
+// start plugin: sbt-site, sbt-ghpages
 lazy val site = (project in file("site"))
-  .enablePlugins(HugoPlugin)
+  .enablePlugins(GhpagesPlugin, HugoPlugin)
   .settings(commonSettings)
   .settings(
     name := "site",
     description := "Assemble a snazzy website for your project.",
-    baseURL in Hugo := new URI("http://indyscala.org/sbt-plugin-tour")
+    baseURL in Hugo := new URI("http://indyscala.org/sbt-plugin-tour"),
+    git.remoteRepo := "git@github.com:indyscala/sbt-plugin-tour.git",
+    ghpagesBranch := "gh-pages", // default, but be explicit
+    ghpagesNoJekyll := true      // we're using hugo
   )
 
 addCommandAlias("site_01_makeSite", "site/makeSite")
 addCommandAlias("site_02_previewSite", "site/previewSite")
-// end plugin: sbt-site
+
+addCommandAlias("ghpages_01_ghpagesPushSite", "site/ghpagesPushSite")
+addCommandAlias("ghpages_02_pushSite", ";site/clean; site/makeSite ;site/ghpagesPushSite")
+// end plugin: sbt-site, sbt-ghpages
