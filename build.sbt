@@ -102,3 +102,15 @@ addCommandAlias("site_02_previewSite", "site/previewSite")
 addCommandAlias("ghpages_01_ghpagesPushSite", "site/ghpagesPushSite")
 addCommandAlias("ghpages_02_pushSite", ";site/clean; site/makeSite ;site/ghpagesPushSite")
 // end plugin: sbt-site, sbt-ghpages
+
+// start plugin: sbt-scoverage
+lazy val scoverage = (project in file("scoverage"))
+  .settings(commonSettings)
+  .settings(
+    name := "scoverage",
+    description := "How well is my code tested?"
+  )
+
+addCommandAlias("scoverage_01_measure", ";scoverage/clean ;coverage ;scoverage/test ;coverageOff")
+addCommandAlias("scoverage_02_report", ";scoverage/coverageReport")
+// end plugin: sbt-scoverage
