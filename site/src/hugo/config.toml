@@ -7,3 +7,4 @@ theme = "purehugo"
   twitterName = "indyscala"
   githubName = "indyscala"
   description = "Bringing you Hello World - one character at a time"
+  hideShareOptions = true
