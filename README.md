@@ -13,6 +13,7 @@
 
  * [scoverage](scoverage/README.md) - Measure how well your code is tested.
  * [mima](mima/README.md) - Prevent unintended binary incompatibilities between releases.
+ * [scalastyle](scalastyle/README.md)
  * [jmh](jmh/README.md)
  * [gatling](gatling/README.md)
 
