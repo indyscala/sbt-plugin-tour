@@ -1,3 +1,9 @@
 baseurl = "http://localhost:4000/"
 languageCode = "en-us"
 title = "sbt-plugin-tour"
+theme = "purehugo"
+
+[params]
+  twitterName = "indyscala"
+  githubName = "indyscala"
+  description = "Bringing you Hello World - one character at a time"
