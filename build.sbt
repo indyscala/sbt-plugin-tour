@@ -132,3 +132,14 @@ addCommandAlias("revolver_02_status", "reStatus")
 addCommandAlias("revolver_03_stop", "reStop")
 addCommandAlias("revolver_04_back_to_root", "project root")
 // end plugin: sbt-revolver
+
+// start plugin: sbt-mima-plugin
+lazy val mima = (project in file("mima"))
+  .settings(commonSettings)
+  .settings(
+    name := "mima",
+    description := "Prevent unintended binary incompatibilities between releases."
+  )
+
+addCommandAlias("mima_01_mimaReportBinaryIssues", "mima/mimaReportBinaryIssues")
+// end plugin: sbt-mima-plugin

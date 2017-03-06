@@ -11,6 +11,7 @@
 ## Testing and Static Analysis
 
  * [scoverage](scoverage/README.md) - Measure how well your code is tested.
+ * [mima](mima/README.md) - Prevent unintended binary incompatibilities between releases.
 
 ## Publishing
 
@@ -21,7 +22,6 @@
 
 ## TODO:
 
- * mima
  * unidoc
  * release
  * jmh
