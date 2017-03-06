@@ -7,29 +7,22 @@
  * [updates](updates/README.md) - How out-of-date are my dependencies?
  * [coursier](coursier/README.md) - Fetch your dependencies faster...and more friendly.
  * [revolver](revolver/README.md) - Speed up your dev/test cycle.
+ * [native-packager]
 
 ## Testing and Static Analysis
 
  * [scoverage](scoverage/README.md) - Measure how well your code is tested.
  * [mima](mima/README.md) - Prevent unintended binary incompatibilities between releases.
+ * [jmh]
+ * [gatling]
 
-## Publishing
+## Documentation and Publishing
 
  * [site](site/README.md) - Assemble a snazzy website for your project.
  * [ghpages](site/README.md#sbt-ghpages) - Publish that snazzy website on GitHub Pages.
  * [unidoc](unidoc/README.md) - Generate scaladoc HTML, optionally combined with javadoc.
+ * [release]
+ * [sonatype]
  * [rig](rig/README.md) - Simplifies process of running CI on Travis and publishing releases to Sonatype.
-
-
-## TODO:
-
- * release
- * jmh
- * sonatype
- * travisci
- * tut
- * native-packager
- * twirl
- * gatling
- * webpack
- * maybe better demo of rig
+ * [tut]
+ * [twirl]
