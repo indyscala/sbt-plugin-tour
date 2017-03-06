@@ -114,3 +114,21 @@ lazy val scoverage = (project in file("scoverage"))
 addCommandAlias("scoverage_01_measure", ";scoverage/clean ;coverage ;scoverage/test ;coverageOff")
 addCommandAlias("scoverage_02_report", ";scoverage/coverageReport")
 // end plugin: sbt-scoverage
+
+// start plugin: sbt-revolver
+lazy val revolver = (project in file("revolver"))
+  .settings(commonSettings)
+  .settings(
+    name := "revolver",
+    description := "Super-fast development turnaround for your Scala applications.",
+    libraryDependencies ++= Seq(
+      "com.jsuereth" %% "scala-arm" % "2.0"
+    ),
+    mainClass in reStart := Some("org.indyscala.sbt_plugin_tour.ConsoleSpammer")
+  )
+
+addCommandAlias("revolver_01_start", ";project revolver ;~reStart")
+addCommandAlias("revolver_02_status", "reStatus")
+addCommandAlias("revolver_03_stop", "reStop")
+addCommandAlias("revolver_04_back_to_root", "project root")
+// end plugin: sbt-revolver

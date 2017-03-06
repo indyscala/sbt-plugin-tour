@@ -6,6 +6,7 @@
  * [dependency-graph](dependency-graph/README.md) - Everything you wanted to know about your project's dependencies.
  * [updates](updates/README.md) - How out-of-date are my dependencies?
  * [coursier](coursier/README.md) - Fetch your dependencies faster...and more friendly.
+ * [revolver](revolver/README.md) - Speed up your dev/test cycle.
 
 ## Testing and Static Analysis
 
