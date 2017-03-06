@@ -5,4 +5,4 @@
 -----------------------|-------------------
 Home                   | https://github.com/rtimush/sbt-updates#readme
 License                | BSD-3-Clause
-Tagline                | SBT plugin that can check maven repositories for dependency updates
+Summary                | Check artifact repositories for updates to your dependencies.
