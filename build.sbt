@@ -74,7 +74,7 @@ lazy val updates = (project in file("updates"))
     name := "updates",
     description := "How out-of-date are my dependencies?",
     libraryDependencies ++= Seq(
-      "com.typesafe.slick" %% "slick" % "3.0.1",
+      "com.typesafe.slick" % "slick_2.11" % "3.0.1",
       "org.scalaz" %% "scalaz-core" % "7.2.7"
     )
   )
