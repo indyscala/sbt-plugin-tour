@@ -17,12 +17,12 @@
 
  * [site](site/README.md) - Assemble a snazzy website for your project.
  * [ghpages](site/README.md#sbt-ghpages) - Publish that snazzy website on GitHub Pages.
+ * [unidoc](unidoc/README.md) - Generate scaladoc HTML, optionally combined with javadoc.
  * [rig](rig/README.md) - Simplifies process of running CI on Travis and publishing releases to Sonatype.
 
 
 ## TODO:
 
- * unidoc
  * release
  * jmh
  * sonatype

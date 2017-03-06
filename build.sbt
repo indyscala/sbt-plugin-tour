@@ -147,3 +147,15 @@ lazy val mima = (project in file("mima"))
 
 addCommandAlias("mima_01_mimaReportBinaryIssues", "mima/mimaReportBinaryIssues")
 // end plugin: sbt-mima-plugin
+
+// start plugin: sbt-unidoc
+lazy val unidoc = (project in file("unidoc"))
+  .enablePlugins(ScalaUnidocPlugin)
+  .settings(commonSettings)
+  .settings(
+    name := "unidoc",
+    description := "Generate combined scaladoc and javadoc HTML."
+  )
+
+addCommandAlias("unidoc_01_unidoc", "unidoc/unidoc")
+// end plugin: sbt-unidoc
